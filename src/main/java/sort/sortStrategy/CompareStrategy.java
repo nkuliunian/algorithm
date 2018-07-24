@@ -1,5 +1,5 @@
-package sort;
+package sort.sortStrategy;
 
 public interface CompareStrategy {
-    void compare();
+    <T> int compare(T a,T b) throws Exception;
 }
