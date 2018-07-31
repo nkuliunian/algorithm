@@ -2,5 +2,5 @@ package sort;
 
 public interface SortAlgorithm {
 
-    void sort(Integer[] originArray);
+    Integer[] sort(Integer[] originArray);
 }

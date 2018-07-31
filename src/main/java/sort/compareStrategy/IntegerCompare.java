@@ -1,4 +1,4 @@
-package sort.sortStrategy;
+package sort.compareStrategy;
 
 public class IntegerCompare implements CompareStrategy {
 //    @Override

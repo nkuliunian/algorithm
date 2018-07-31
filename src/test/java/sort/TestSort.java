@@ -14,14 +14,36 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = "classpath:ApplicationContext.xml")
 public class TestSort {
 
+
+    Integer[] intArray = {2,4,9,1,0,3,5,8,6};
+
     /**
      * 测试冒泡排序
      */
     @Test
     public void testBubbleSort() {
-        Integer[] intArray = {2,4,9,1,0,3,5,8,6};
-
         SortContext sortContext = new SortContext(new BubbleSort());
+        sortContext.sort(intArray);
+    }
+
+    @Test
+    public void testInsertionSort() {
+
+        SortContext sortContext = new SortContext(new InsertionSort());
+        sortContext.sort(intArray);
+    }
+
+    @Test
+    public void testSelectionSort() {
+
+        SortContext sortContext = new SortContext(new SelectionSort());
+        sortContext.sort(intArray);
+    }
+
+    @Test
+    public void testMergeSort() {
+
+        SortContext sortContext = new SortContext(new MergeSort());
         sortContext.sort(intArray);
     }
 }
