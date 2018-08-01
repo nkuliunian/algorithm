@@ -2,8 +2,6 @@ package sort;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -44,6 +42,13 @@ public class TestSort {
     public void testMergeSort() {
 
         SortContext sortContext = new SortContext(new MergeSort());
+        sortContext.sort(intArray);
+    }
+
+    @Test
+    public void testQuickSort() {
+
+        SortContext sortContext = new SortContext(new QuickSort());
         sortContext.sort(intArray);
     }
 }

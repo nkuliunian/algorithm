@@ -7,7 +7,7 @@ public class MergeSort implements SortAlgorithm {
     public Integer[] sort(Integer[] originArray) {
         int n = originArray.length;
 
-        if (n >= 2) {
+        if (n > 2) {
             Integer[] left = Arrays.copyOfRange(originArray, 0, n / 2);
             Integer[] right = Arrays.copyOfRange(originArray, n / 2, n);
             Integer[] newLeft = sort(left);
