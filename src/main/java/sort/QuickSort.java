@@ -62,10 +62,7 @@ public class QuickSort implements SortAlgorithm {
         left = sort(left);
         right = sort(right);
 
-        Integer[] sortedArray = new Integer[n];
-        for (int i=0;i<left.length;i++) {
-            sortedArray[i]=left[i];
-        }
+        Integer[] sortedArray = Arrays.copyOf(left, n);
         sortedArray[leftIndex-1] = originArray[leftIndex-1];
         for (int i=0;i<right.length;i++) {
             sortedArray[leftIndex+i]=right[i];
