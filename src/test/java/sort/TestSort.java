@@ -51,4 +51,14 @@ public class TestSort {
         SortContext sortContext = new SortContext(new QuickSort());
         sortContext.sort(intArray);
     }
+
+    /**
+     * 测试统计排序
+     */
+    @Test
+    public void testCountSort() {
+        SortContext sortContext = new SortContext(new CountSort());
+        Integer[] intArray = new Integer[]{1,2,2,3,2,4,7,7,1};
+        sortContext.sort(intArray);
+    }
 }
